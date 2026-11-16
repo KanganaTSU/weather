@@ -1,0 +1,462 @@
+/* ==========================================
+   WEATHERWISE - GLOBAL STYLING
+========================================== */
+
+.stApp {
+    background:
+        radial-gradient(ellipse at 10% 10%, #76266f 0%, transparent 40%),
+        radial-gradient(ellipse at 90% 30%, #8c277e 0%, transparent 35%),
+        linear-gradient(135deg, #240d32, #40123f, #260e38);
+
+    background-size: 200% 200%;
+    animation: gradientMove 15s ease infinite;
+
+    color: white;
+}
+
+/* Animated Background */
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Main Layout */
+
+.block-container {
+    max-width: 1250px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Hide Streamlit Header */
+
+[data-testid="stHeader"] {
+    background: transparent;
+}
+
+/* Text Styling */
+
+h1, h2, h3, h4 {
+    color: white !important;
+}
+
+p, label, span {
+    color: #f2e5f5;
+}
+
+/* Main Title */
+
+.main-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -1px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #ff72c6, #bd75ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle */
+
+.subtitle {
+    color: #d9b9e8;
+    font-size: 16px;
+}
+
+/* Search Input */
+
+.stTextInput input {
+    background: rgba(255,255,255,0.10);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.stTextInput input::placeholder {
+    color: #d5b8dc;
+}
+
+/* Search Button */
+
+.stButton button {
+    background: linear-gradient(90deg, #a83fce, #f04ca8);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    padding: 10px 25px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(240, 76, 168, 0.2);
+}
+
+.stButton button:hover {
+    background: linear-gradient(90deg, #c65be9, #ff69bd);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(240, 76, 168, 0.4);
+    color: white;
+}
+
+/* Weather Hero Card */
+
+.hero-card {
+    background: linear-gradient(
+        120deg,
+        rgba(158, 59, 190, 0.95),
+        rgba(218, 55, 153, 0.90)
+    );
+
+    border-radius: 28px;
+    padding: 35px;
+    margin-top: 25px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.2);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+.city-name {
+    font-size: 27px;
+    font-weight: 700;
+    color: white;
+}
+
+.temperature {
+    font-size: 76px;
+    font-weight: 800;
+    color: white;
+    line-height: 1.2;
+}
+
+.weather-description {
+    font-size: 20px;
+    color: #fff0fa;
+}
+
+.weather-icon {
+    font-size: 85px;
+    text-align: center;
+}
+
+/* Information Cards */
+
+.weather-card {
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.13);
+    border-radius: 20px;
+    padding: 22px;
+    min-height: 125px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    backdrop-filter: blur(12px);
+
+    transition: all 0.3s ease;
+}
+
+.weather-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 12px 30px rgba(217,70,239,0.2);
+}
+
+.card-label {
+    color: #d9b9e8;
+    font-size: 14px;
+}
+
+.card-value {
+    color: white;
+    font-size: 27px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.card-icon {
+    font-size: 25px;
+}
+
+/* Forecast Cards */
+
+.forecast-card {
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 18px;
+    padding: 15px 8px;
+    text-align: center;
+    min-height: 155px;
+
+    transition: all 0.3s ease;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.16);
+    border-color: #e879f9;
+}
+
+.forecast-day {
+    color: #e7c9ef;
+    font-size: 13px;
+}
+
+.forecast-icon {
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.forecast-temp {
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Section Titles */
+
+.section-title {
+    font-size: 24px;
+    font-weight: 750;
+    color: white;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+/* Dividers */
+
+hr {
+    border-color: rgba(255,255,255,0.15);
+}
+
+/* Plotly Chart Container */
+
+[data-testid="stPlotlyChart"] {
+    background: rgba(255,255,255,0.06);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+/* Alerts */
+
+[data-testid="stAlert"] {
+    background: rgba(255,255,255,0.10);
+    color: white;
+    border-radius: 15px;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    color: #cba9d8;
+    padding: 30px;
+    font-size: 13px;
+}
+
+/* ==========================================
+   WEATHERWISE WELCOME SCREEN
+========================================== */
+
+.welcome-container {
+    position: relative;
+    min-height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 25px;
+}
+
+/* Welcome Glass Card */
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 45px 35px;
+    width: 100%;
+    max-width: 750px;
+
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.2),
+        0 0 30px rgba(190, 80, 220, 0.12);
+
+    animation: welcomeAppear 1.2s ease;
+}
+
+/* Welcome Icon */
+
+.welcome-icon {
+    font-size: 85px;
+    margin-bottom: 15px;
+    animation: weatherFloat 3s ease-in-out infinite;
+}
+
+/* Welcome Heading */
+
+.welcome-heading {
+    font-size: 35px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 12px;
+}
+
+/* Description */
+
+.welcome-description {
+    font-size: 18px;
+    color: #f0b8ed;
+    margin-bottom: 15px;
+}
+
+/* Instruction */
+
+.welcome-instruction {
+    font-size: 15px;
+    color: #e4cde9;
+    line-height: 1.8;
+}
+
+/* Welcome Badge */
+
+.welcome-badge {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+
+    background: rgba(217, 70, 239, 0.15);
+    border: 1px solid rgba(232, 121, 249, 0.35);
+
+    border-radius: 30px;
+    color: #f5c7ff;
+    font-size: 13px;
+}
+
+/* Floating Weather Elements */
+
+.floating-weather {
+    position: absolute;
+    font-size: 35px;
+    opacity: 0.65;
+    z-index: 1;
+}
+
+.weather-sun {
+    top: 12%;
+    left: 12%;
+    animation: weatherFloat 4s ease-in-out infinite;
+}
+
+.weather-cloud {
+    top: 20%;
+    right: 13%;
+    animation: cloudFloat 6s ease-in-out infinite;
+}
+
+.weather-rain {
+    bottom: 15%;
+    left: 17%;
+    animation: weatherFloat 5s ease-in-out infinite;
+}
+
+.weather-star {
+    bottom: 18%;
+    right: 17%;
+    animation: starGlow 2s ease-in-out infinite;
+}
+
+/* Background Glow */
+
+.welcome-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+
+    background: radial-gradient(
+        circle,
+        rgba(217, 70, 239, 0.25),
+        transparent 70%
+    );
+
+    filter: blur(30px);
+    animation: glowPulse 5s ease-in-out infinite;
+}
+
+/* Animations */
+
+@keyframes welcomeAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes weatherFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes cloudFloat {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-18px);
+    }
+}
+
+@keyframes starGlow {
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
